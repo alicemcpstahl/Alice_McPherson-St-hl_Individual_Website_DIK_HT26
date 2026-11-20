@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alice McPherson-Ståhl week 47 hand-in</title>
+  <meta name="description"
+    content="Austin Franklin: composer and sound artist working with algorithmic composition, generative music and machine learning.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+</head>
+
+<body>
+  <!-- PixiJS draws everything generative into this one canvas, behind the page -->
+  <div id="stage" aria-hidden="true"></div>
+
+  <header class="top">
+    <h1>B.E.A.N.S Final Installation</h1>
+
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Presented by Alice McPherson-Ståhl</h2>
+      <h3>Created by Alice McPherson-Ståhl and Emili Mechilli</h3>
+      <p>BEANS is an interactive musical instrument made from hand built electronic parts. Through our Button Bean and
+        Piano Bean, both of which are connected to an Arduino, you can select beats to be played through loudspeakers.
+        You can then, for either all beats or a selected beat on the screen, change the sound's pitch and speed through
+        separate potentiometers. You can also choose to delete a selected beat by then hitting the big button. The
+        active beats are shown on the screen as well as any changes made to them. With each added beat, the intensity of
+        the visual graphics increases. The light shining on the whole installation also changes with each press of any
+        button. When you feel finished you can hit the big reset button to clear all the active beats. Separately there
+        are two hand built lights to switch on or off.
+
+      <h4>The BEANS reflection as a designer</h4>
+      <p>BEANS, I would like to say reflects my work as a designer and my personality in that I’m never actually aware
+        of what is enough or bare minimum. This project has taken countless hours to complete, it did get to a point
+        where it was seriously getting a bit too much, I won’t lie. However I find all my hard work has paid off and I
+        was able to stand next to our installation during the Algorave and feel proud of the effort, time and attention
+        to detail I had put in. BEANS is also a reflection of me and Emili as a team with our first angle being <i>super
+          cool electronics and software presented in a girly in your face way</i>. The aesthetics of every component
+        have 100%
+        been created as a cheeky remark to the otherwise sexist tech world. To finish off, BEANS is a perfect example of
+        what can come from a lot of freedom, curiosity and ambition, qualities we both found in each other.</p>
+
+
+      </p>
+      <!-- Replace with your real address -->
+      <p><a class="contact" href="mailto:25almc@suni.se">Any questions? Email me!</a></p>
+    </section>
+
+    <div class="gridtitle">
+      <h2>THE ALGORAVE GALLERY</h2>
+      <p>Click on an image or video to see it in a bigger view and with sound! <br>
+        Feel free to randomly click on the webpage too to see the real time animation increase just like for the real
+        BEANS!</p>
+    </div>
+    <!-- Each data-motif names a drawing function in js/main.js -->
+    <section id="work" aria-label="Work">
+      <ul class="grid">
+        <li class="tile">
+          <div class="art">
+            <img src="images/1.jpg" alt="">
+          </div>
+          <h2>Me showing our installation to my friends</h2>
+        </li>
+
+        <li class="tile">
+          <div class="art">
+            <img src="images/7.jpg" alt="">
+          </div>
+          <h2>The Bumfights Light</h2>
+        </li>
+
+
+        <li class="tile">
+          <div class="art">
+            <video src="videos/1.MOV" autoplay muted loop playsinline></video>
+          </div>
+          <h2>A demonstration of how the installation works</h2>
+        </li>
+
+        <li class="tile">
+          <div class="art">
+            <img src="images/2.jpg" alt="">
+          </div>
+          <h2>The live performance by Emma<sup>2</sup></h2>
+        </li>
+
+        <li class="tile">
+          <div class="art">
+            <img src="images/8.jpg" alt="">
+          </div>
+          <h2>The Button BEAN</h2>
+        </li>
+
+        <li class="tile">
+          <div class="art">
+            <img src="images/3.jpg" alt="">
+          </div>
+          <h2>Me and Emili with our installation</h2>
+        </li>
+
+        <li class="tile">
+          <div class="art">
+            <img src="images/4.jpg" alt="">
+          </div>
+          <h2>Anders photobombing our setup</h2>
+        </li>
+
+        <li class="tile">
+          <div class="art">
+            <img src="images/9.jpg" alt="">
+          </div>
+          <h2>Crackhead</h2>
+        </li>
+
+        <li class="tile">
+          <div class="art">
+            <img src="images/5.jpg" alt="">
+          </div>
+          <h2>Some last minute soldering during the dress rehersal</h2>
+        </li>
+
+        <li class="tile">
+          <div class="art">
+            <video src="videos/4.MOV" autoplay muted loop playsinline></video>
+          </div>
+          <h2>A user testing our work</h2>
+        </li>
+
+        <li class="tile">
+          <div class="art">
+            <img src="images/10.jpg" alt="">
+          </div>
+          <h2>The Setup</h2>
+        </li>
+
+        <li class="tile">
+          <div class="art">
+            <img src="images/6.jpg" alt="">
+          </div>
+          <h2>Another pic of the event</h2>
+        </li>
+
+        <li class="tile">
+          <div class="art">
+            <img src="images/11.jpg" alt="">
+          </div>
+          <h2>The reset button</h2>
+        </li>
+
+      </ul>
+    </section>
+
+    <div class="aiuse">
+      <h2>AI USE</h2>
+
+      <div class="boxes">
+        <div class="left">
+          <div class="box">
+            <h3>Which tool</h3>
+            <p>
+              Claude Sonnet 5.5
+            </p>
+          </div>
+          <div class="box">
+            <h3>Purpose and Scope</h3>
+            <p>
+              AI was used to change the animation input to the bubbles from our website. Instead of the previous blue
+              dots
+              moving the mouse now moves the bubbles away. The opening of images and videos in full view was created
+              with
+              code from a previous private project but dealing with issues in integrating the code were solved with
+              help
+              from AI. A prompt used for this was: <i>“denna blanka sidan har en pixi js input som gör blåa prickar på
+                skärmen efter musen. kan du ge mig kod för att ändra den animationen så den ser ut som bollarna på
+                beans
+                sidan?”</i> This was in addition to having linked the index, javascript and css files for the template
+              and
+              our website.
+            </p>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="box">
+            <h3>My own contribution</h3>
+            <p>All changes to the CSS such as background, headers and image displays are handwritten. Minor changes to
+              opening images and videos in full view were however made with AI such as using viewheight and viewwidth
+              instead of rem. The text has also been written by me as well as images and videos being supplied by me.
+              I have also done some tweaks to the AIs code, for example the initial speed of the bubbles or the size of
+              the bubbles canvas area.
+            </p>
+          </div>
+          <div class="box">
+            <h3>Source criticism</h3>
+            <p>Due to not doing any larger changes to the website with AI there were no errors or issues that showed up.
+              I
+              could not see any biases either and due to the request only being about code the factual shortcomings were
+              not really a possibility. The only real reason I used AI was simply because I don’t understand how to use
+              or
+              get access to PIXI JS elements such as inputs. In class we only went over the showcase section of the PIXI
+              JS website but not how it can be integrated with our code. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+
+  <footer class="bottom">
+    <p>Thank you for coming to my TedTalk</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/pixi.js@8.6.6/dist/pixi.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

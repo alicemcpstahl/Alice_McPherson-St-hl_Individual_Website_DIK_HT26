@@ -1,0 +1,310 @@
+/* FONTS */
+@font-face {
+  font-family: "oswald";
+  src: url(../fonts/Oswald-Regular.ttf);
+}
+
+.Oswald-Regular.ttf {
+  font-family: "oswald", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "oswaldbold";
+  src: url(../fonts/Oswald-Bold.ttf);
+}
+
+.Oswald-Bold.ttf {
+  font-family: "oswaldbold", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "monserrat";
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+.Montserrat-Regular.ttf {
+  font-family: "monserrat", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+:root {
+  --edge: clamp(1rem, 4vw, 3rem);
+  --gap: clamp(1rem, 2.5vw, 2rem);
+  --ink: #121fcf;
+  --muted: #8a79b7;
+  --accent: #c61f72;
+  --tile: #ffde59;
+}
+
+/* GENERAL */
+body {
+  background: #EEAECA;
+  background: radial-gradient(circle, #ffde59 0%, #ff70ba 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  min-height: 100vh;
+}
+
+a {
+  color: #8a79b7;
+  text-underline-offset: 0.2em;
+  letter-spacing: 0.1rem;
+  font-family: 'oswald', system-ui;
+  font-weight: 700;
+}
+
+a:hover {
+  color: #c61f72;
+  font-weight: 700;
+}
+
+h1 {
+  font-family: 'oswaldbold', system-ui;
+  font-size: 3.5rem;
+  letter-spacing: 0.1rem;
+  color: #121fcf;
+  background-image: linear-gradient(to right, #8a79b7 0%, #8ec55e, #1989d8, #c61f72 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+}
+
+h2 {
+  font-family: 'oswald', system-ui;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  color: #1989d8;
+}
+
+h3 {
+  font-family: 'oswald', system-ui;
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+  color: #7bac50;
+}
+
+h4 {
+  font-family: 'oswald', system-ui;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  color: #1989d8;
+}
+
+p {
+  font-family: 'monserrat', system-ui;
+}
+
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* The canvas is fixed behind the page and lets clicks through */
+#stage {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#stage canvas {
+  display: block;
+}
+
+.top,
+main,
+.bottom {
+  position: relative;
+  z-index: 1;
+}
+
+/* HEADER */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: var(--edge);
+}
+
+
+
+.top nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.top nav a {
+  text-decoration: none;
+}
+
+main {
+  padding: 0 var(--edge);
+}
+
+
+/* ---------- 4. Intro ---------- */
+.intro {
+  padding: clamp(2rem, 10vh, 6rem) 0;
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  line-height: 1.4;
+  text-align: left;
+}
+
+.intro h2 {
+  font-size: 2rem;
+}
+
+.intro h3 {
+  font-size: 1.2rem;
+}
+
+.intro p {
+  margin: 0 0 1em;
+}
+
+
+
+/* ---------- 5. Work grid ---------- */
+
+.gridtitle h2 {
+  font-size: 2rem;
+}
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  gap: calc(var(--gap) * 1.5) var(--gap);
+}
+
+/* Empty box: Pixi paints the background and the motif inside it */
+.art {
+  aspect-ratio: 4 / 3;
+}
+
+.art img,
+.art video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* fyller rutan utan att sträcka bilden */
+}
+
+.tags {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+
+
+/* ---------- 6. AI use ---------- */
+
+.aiuse {
+  display: flex;
+  flex-direction: column;
+}
+
+.aiuse h2 {
+  font-size: 2rem;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.box {
+  /* background-color: rgba(255, 173, 133, 0.5); */
+
+  background: radial-gradient(circle, #8a79b750 50%, #1989d850);
+  padding: 1.7rem;
+  border-radius: 30px;
+  text-align: justify;
+}
+
+
+/* ---------- 7. Footer ---------- */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem var(--edge);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.bottom p {
+  margin: 0;
+}
+
+.art img,
+.art video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: zoom-in;
+  border-radius: 30px;
+}
+
+.lightbox {
+  border: none;
+  padding: 0;
+  background: transparent;
+  max-width: 94vw;
+  max-height: 94vh;
+  overflow: visible;
+}
+
+.lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.lightbox img,
+.lightbox video {
+  display: block;
+  max-width: 94vw;
+  max-height: 90vh;
+  cursor: default;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
